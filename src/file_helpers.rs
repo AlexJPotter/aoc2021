@@ -23,3 +23,18 @@ pub fn read_file_as_lines(relative_path: &str) -> Vec<String> {
 
     return vector;
 }
+
+pub fn read_file_as_raw_lines(relative_path: &str) -> Vec<String> {
+    let file_as_string = read_file_as_string(relative_path);
+    let normalised = file_as_string.replace("\r\n", "\n");
+    let split = normalised.split("\n");
+
+    let mut vector: Vec<String> = Vec::new();
+
+    for line in split {
+        let string_line = String::from(line);
+        vector.push(string_line);
+    }
+
+    return vector;
+}
