@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use itertools::Itertools;
 use crate::file_helpers::read_file_as_lines;
 
@@ -26,7 +25,7 @@ pub fn part_2() {
     let lines = parse_input();
 
     for line in lines {
-        let mut possible_wirings: Vec<[char; 7]> = get_possible_wirings(); // [['d','e','a','f','g','b','c']].to_vec();
+        let possible_wirings: Vec<[char; 7]> = get_possible_wirings(); // [['d','e','a','f','g','b','c']].to_vec();
 
         // let mut possible_segments_by_wire: HashMap<char, Vec<char>> = HashMap::new();
 
@@ -167,7 +166,7 @@ fn to_segment_pattern(wire_pattern: &String, wiring: &[char; 7]) -> String {
             // println!("wire {}; index {}; -> segment {}", wire, wire_index, segment);
             return segment;
         })
-        .collect::<String>();;
+        .collect::<String>();
 }
 
 fn to_number(segment_pattern: &String) -> Option<i32> {
