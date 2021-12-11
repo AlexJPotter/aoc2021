@@ -9,8 +9,9 @@ pub mod day_07;
 pub mod day_08;
 pub mod day_09;
 pub mod day_10;
+pub mod day_11;
 
-pub use crate::day_10::solution;
+pub use crate::day_11::solution;
 
 fn main() {
     solution::part_2();
