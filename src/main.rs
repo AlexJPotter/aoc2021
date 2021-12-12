@@ -10,9 +10,13 @@ pub mod day_08;
 pub mod day_09;
 pub mod day_10;
 pub mod day_11;
+pub mod day_12;
 
-pub use crate::day_11::solution;
+use std::time::Instant;
+pub use crate::day_12::solution;
 
 fn main() {
+    let now = Instant::now();
     solution::part_2();
+    println!("Completed in {}ms / {}μs", now.elapsed().as_millis(), now.elapsed().as_micros());
 }
